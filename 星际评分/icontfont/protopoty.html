@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title></title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    //分离相同点
+    //1，咖啡喝茶不同，抽象出饮料
+    //2，把水煮沸
+    //3，泡的方式不同，抽象成泡
+    //4，加的调料不同，抽象成调料
+    var Bevearge = function() {};
+    //这一步是相同的
+    Bevearge.prototype.boilWater = function() {
+        console.log("把水煮沸");
+    }
+    Bevearge.prototype.brew = function() {
+        throw new Error("子类必须重写该方法")
+    }
+    Bevearge.prototype.pourIncup = function() {
+        throw new Error("子类必须重写该方法")
+
+    }
+    Bevearge.prototype.addCondiments = function() {
+        throw new Error("子类必须重写该方法")
+
+    };
+    //添加钩子方法,增加可选性
+    Bevearge.prototype.customerWantsCondiment = function() {
+        return true;
+    }
+    Bevearge.prototype.init = function() {
+        this.boilWater();
+        this.brew();
+        this.pourIncup();
+        if (this.customerWantsCondiment) {
+            this.addCondiments();
+        }
+
+    }
+
+
+
+    var Coffee = function() {};
+    //在实例原型上面挂载对象
+    Coffee.prototype.boilWater = function() {
+        console.log("把水煮沸");
+    }
+    Coffee.prototype.brew = function() {
+        console.log("用沸水冲泡咖啡");
+    }
+    Coffee.prototype.pourIncup = function() {
+        console.log("把咖啡倒进杯子");
+    }
+    Coffee.prototype.addCondiments = function() {
+        console.log("加糖和牛奶");
+    }
+    Coffee.prototype = new Bevearge();
+
+    //作为执行方法
+    // Coffee.prototype.init=function(){
+    // 	//这里的this指向Coffee;
+    // 	this.boilWater();
+    // 	this.brewCoffee();
+    // 	this.pourIncup();
+    // 	this.addSougerAndMilk();
+
+    // }
+    //实例化构造函数
+    var coffee = new Coffee();
+    coffee.init();
+
+
+    //泡茶
+    var Tea = function() {};
+    //步骤
+    Tea.prototype.boilWater = function() {
+        console.log("把水煮沸");
+    }
+    Tea.prototype.brew = function() {
+        console.log("用沸水浸泡茶叶");
+    }
+    Tea.prototype.pourIncup = function() {
+        console.log("把茶水倒进杯子");
+    }
+    Tea.prototype.addCondiments = function() {
+        console.log("加柠檬");
+    }
+    Tea.prototype.customerWantsCondiment=function(){
+    	return false;
+    }
+    Tea.prototype = new Bevearge();
+
+    //作为执行方法
+    // Tea.prototype.init=function(){
+    // 	//这里的this指向Coffee;
+    // 	this.boilWater();
+    // 	this.steepTea();
+    // 	this.pourIncup();
+    // 	this.addLemon();
+    // }
+    var tea = new Tea();
+    tea.init();
+    </script>
+</body>
+
+</html>

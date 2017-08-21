@@ -1,0 +1,90 @@
+body {
+    width: 100%;
+    height: 640px;
+    margin: 0 auto;
+    padding-top: 60px;
+    background-color: #333;
+}
+#container {
+    width: 800px;
+    height: 500px;
+    margin: 0 auto;
+    background: url("http://img.h5course.cn/codepen/2017.01.19.02.png") no-repeat;
+}
+/*右侧的小图区域*/
+#container .thumbnails {
+    float: left;
+    width: 240px;
+    margin: 70px 0 0 25px;
+}
+.thumbnails h2 {
+    margin: 15px 0;
+    font-size: 22px;
+    text-align: center;
+}
+.thumbnailimage {
+    float: left;
+    padding: 7px;
+}
+.large-thumb {
+    float: left;
+    position: relative;
+    width: 64px;
+    height: 64px;
+    padding: 0px 10px 0px 0;
+}
+/*缩略图图片大小*/
+img.large-thumb-image {
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 4px;
+    width: 54px;
+    height: 54px;
+}
+/*右侧缩略图的边框与阴影处理 start*/
+.large-thumb-border {
+    position: absolute;
+    width: 65px;
+    height: 65px;
+    background: url("http://img.h5course.cn/codepen/2017.01.19.03.png") no-repeat;
+}
+.large-thumb-shine {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    width: 55px;
+    height: 55px;
+    background: url("http://img.h5course.cn/codepen/2017.01.19.04.png") -150px 0 no-repeat;
+}
+.thumb-container {
+    width: 65px;
+    height: 65px;
+    background: url("http://img.h5course.cn/codepen/2017.01.19.05.png") no-repeat;
+}
+/*end*/
+/*左侧的大图区域*/
+#largephoto {
+    float: left;
+    width: 440px;
+    height: 370px;
+    margin: 60px 0 0 40px;
+    background-color: #333;
+    border-radius: 10px;
+    background-size: 100% 100%;
+}
+/*左侧大图的阴影背景*/
+#largetrans {
+    width: 440px;
+    height: 370px;
+    background-image: url("http://img.h5course.cn/codepen/2017.01.19.06.png");
+    background-size: 100% 100%;
+    border-radius: 10px;
+}
+/*大图的样式大小设置*/
+.large-image {
+    display: none;
+    float: left;
+    width: 440px;
+    height: 370px;
+}

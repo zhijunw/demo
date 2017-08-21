@@ -1,0 +1,359 @@
+/* 头部  */
+
+header {
+    width: 100%;
+    background: #fafafa;
+    height: 30px;
+}
+
+.warrper {
+    width: 990px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.header-warrper .header-left {
+    float: left;
+    line-height: 30px;
+}
+
+.header-left a {
+    font-size: 12px;
+    color: #999;
+}
+
+.header-left:hover .left-logo {
+    transform: rotate(720deg);
+}
+
+.header-warrper .header-left .left-logo {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: url(../images/20130330A.png) no-repeat;
+    background-position: -90px -23px;
+    transition: transform .5s ease-in 0s;
+}
+
+.header-warrper .header-nav {
+    float: right;
+}
+
+.header-nav li {
+    float: left;
+    font-size: 12px;
+    line-height: 30px;
+    padding-right: 15px;
+    color: #333;
+}
+
+.header-nav .nth5 {
+    position: relative;
+}
+
+.header-nav .nth6 {
+    position: relative;
+}
+
+
+/*  公共属性a  */
+
+.header-warrper a {
+    color: #333;
+    text-decoration: none;
+}
+
+.header-warrper a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+
+/*   end */
+
+.header-warrper .nav-menu b {
+    width: 0px;
+    height: 12px;
+    border-left: 1px solid #ddd;
+    margin-right: 10px;
+}
+
+.header-warrper .nav-menu i {
+    display: inline-block;
+    width: 7px;
+    height: 4px;
+    background: url(../images/20130330A.png) no-repeat;
+    background-position: -95px -55px;
+    transition: transform .5s ease-in 0s;
+}
+
+.header-warrper .nav-menu .nth5 i,
+.header-warrper .nav-menu .nth6 i {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+}
+
+
+/* 动画*/
+
+.nth5:hover i,
+.nth6:hover i {
+    transform: rotate(360deg);
+}
+
+
+/*  头部结束  */
+
+
+/*    内容   */
+
+.content {
+    background: #f2f2f2;
+    width: 100%;
+}
+
+.content-logo {
+    padding: 10px 0;
+}
+
+.content-logo a {
+    font-size: 0;
+}
+
+.content-logo b {
+    display: inline-block;
+    width: 111px;
+    height: 46px;
+    background: url(../images/2.png) no-repeat;
+    margin-left: 5px;
+}
+
+.content-logo b,
+.content-logo img {
+    vertical-align: middle;
+}
+
+
+/*  注册信息  */
+
+.regist-title {
+    overflow: hidden;
+    margin-bottom: -2px;
+}
+
+.regist-title ul {
+    padding-left: 337px;
+    float: left;
+    overflow: hidden;
+}
+
+.regist-title ul li {
+    float: left;
+    width: 100px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: #999;
+    margin-right: 5px;
+    background: #f2f2f2;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.regist-title .active {
+    background: #fff;
+    border-bottom: 0;
+}
+
+.regist-title .active a {
+    color: red;
+}
+
+.regist-title .login {
+    float: right;
+    padding-right: 5px;
+}
+
+.login span,
+.login a {
+    display: inline-block;
+    font-size: 12px;
+}
+
+.login a {
+    color: #999;
+}
+
+.regist-content {
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+.regist-content .regist-logo {
+    padding-top: 20px;
+}
+
+.reg-explain {
+    margin: auto 20px;
+    font-size: 12px;
+    color: #999;
+    height: 73px;
+    line-height: 73px;
+    border-top: 1px solid #e9e9ea;
+}
+
+.reg-explain .more {
+    float: right;
+}
+
+
+/*    表单   */
+
+.form h3 {
+    background: #f2f2f2;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    color: #999;
+    padding: 5px 0 5px 20px;
+}
+
+.account-info {
+    height: 58px;
+    line-height: 28px;
+    padding-top: 10px;
+    color: #999;
+    font-size: 12px;
+}
+.passwordlength{
+    float: left;
+    display: none;
+    width: 588px;
+    text-align: right
+}
+.passwordlength .pass-logo{
+    display: inline-block;
+    width: 104px;
+    height: 13px;
+    background: url(../images/5.gif) no-repeat;
+
+}
+.logo-middle{
+    background-position: 0 -13px;
+}
+.logo-strong{
+    background-position: 0 -26px;
+}
+.account-info .name {
+    width: 270px;
+    border: 1px solid #ddd;
+    outline: none;
+    padding-left: 5px;
+}
+.account-info select{
+	height: 30px;
+	width: 100px;
+	background: #f2f2f2;
+	outline: none;
+
+}
+.account-info option{
+	color: #999;
+	background: #f2f2f2;
+
+}
+.account-info .requird {
+    color: red;
+}
+
+.account-info .label {
+	float: left;
+    padding-right: 10px;
+    text-align: right;
+    width: 300px;
+    display: inline-block;
+    font-size: 14px;
+}
+.account-info .ITbox{
+	display: inline-block;
+	width: 500px;
+}
+.account-info .IT{
+	padding-right: 10px;
+}
+.regist .form .sureinfo{
+	text-align: center;
+}
+.form input:focus{
+border: 1px solid #12ea87;
+}
+.regist .form .btn{
+	    width: 270px;
+    height: 36px;
+    color: #fff;
+    background: #e33a3d;
+    border: none;
+    font-size: 16px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+}
+.formtips{width: 200px;margin:2px;padding:2px;}
+.onerror{
+    background:#FFE0E9 url(../images/reg3.gif) no-repeat 0 center;
+    padding-left:25px;
+}
+.onsuccess{
+    background:#E9FBEB url(../images/reg4.gif) no-repeat 0 center;
+    padding-left:25px;
+}
+.allcheckbox{
+    text-align: center;
+}
+input[type=button]{
+    width: 80px;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #fff;
+    color: #fff;
+    background: #75c185;
+}
+/*  footer    */
+footer{
+	padding-top: 10px;
+	background: #f2f2f2;
+}
+.menu-list{
+	margin:0 60px;
+}
+.menu-list ul{
+	overflow: hidden;
+}
+.menu-list li{
+	float: left;
+	padding-right: 15px;
+	font-size: 12px;
+	color: #333;
+}
+.menu-list li a{
+	margin-right: 10px;
+}
+.menu-list b{
+	width: 0;
+	height: 12px;
+	color: #333;
+	border-right: 1px solid #333;
+}
+.copyright{
+	padding-top: 15px;
+	text-align: center;
+}
+
+
+
+
+
+
+
+

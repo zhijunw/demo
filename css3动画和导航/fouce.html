@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    body {
+        background: black;
+    }
+    
+    .spotlight {
+        width: 650px;
+        margin: 0 auto;
+        padding-top: 100px;
+    }
+    
+    .spotlight ul li {
+        float: left;
+        position: relative;
+    }
+    
+    .spotlight ul li a img {
+        position: relative;
+        width: 200px;
+        height: 120px;
+        border: none;
+    }
+    
+    .spotlight ul li a img.active {
+    	position: absolute;
+        left: -4px;
+        top: -4px;
+        border: 4px solid white;
+        z-index: 1;
+    }
+    </style>
+</head>
+
+<body>
+    <div class='spotlight'>
+        <ul class="clearfix">
+            <li>
+                <a href=""><img src='http://img.h5course.cn/codepen/2017.01.12.01.jpg' /></a>
+            </li>
+            <li>
+                <a href=""><img src='http://img.h5course.cn/codepen/2017.01.12.02.jpg' /></a>
+            </li>
+            <li>
+                <a href=""><img src='http://img.h5course.cn/codepen/2017.01.12.03.jpg' /></a>
+            </li>
+            <li>
+                <a href=""><img src='http://img.h5course.cn/codepen/2017.01.12.04.jpg' /></a>
+            </li>
+            <li>
+                <a href=""><img src='http://img.h5course.cn/codepen/2017.01.12.05.jpg' /></a>
+            </li>
+            <li>
+                <a href=""><img src='http://img.h5course.cn/codepen/2017.01.12.06.jpg' /></a>
+            </li>
+            <li>
+                <a href=""><img src='http://img.h5course.cn/codepen/2017.01.12.07.jpg' /></a>
+            </li>
+            <li>
+                <a href=""><img src='http://img.h5course.cn/codepen/2017.01.12.08.jpg' /></a>
+            </li>
+            <li>
+                <a href=""><img src='http://img.h5course.cn/codepen/2017.01.12.09.jpg' /></a>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    var spotlight = {
+        opacity: 0.2,
+        imgwidth: $(".clearfix").find('img').width(),
+        imgheight: $(".clearfix").find('img').height()
+    }; //存储
+    $(".clearfix li").css({
+        "width": spotlight.imgwidth,
+        "height": spotlight.imgheight
+            //一般的，动画，css最后结束不需要任何符号，多个属性用逗号隔开，并且都是需要用引号。
+    });
+    $('.clearfix li').hover(function() {
+            $(this).find('img').addClass("active").css({
+                    "opacity": 1
+                }),
+                $(this).siblings('li').find('img').css({
+                    "opacity": spotlight.opacity
+                })
+        },
+        function() {
+            $(this).find('img').removeClass("active")
+        }
+    );
+    $('.clearfix').on('mouseleave', function() {
+        $(this).find('img').css({
+            "opacity": 1
+        })
+    })
+    </script>
+</body>
+
+</html>

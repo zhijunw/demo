@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    .allbrand .brand {
+        overflow: hidden;
+        width: 390px;
+        height: 225px;
+        margin: 40px auto 0;
+    }
+    
+    .allbrand .brand a {
+        display: inline;
+        position: relative;
+        float: left;
+        width: 120px;
+        height: 70px;
+        margin: 0 6px 5px 0;
+        color: #fff;
+        font-size: 14px;
+        line-height: 70px;
+        text-align: center;
+    }
+    
+    .allbrand .brand a img {
+        position: absolute;
+        left: 10px;
+        width: 118px;
+        height: 68px;
+        border: 1px solid #e9e8e8;
+    }
+    
+    .allbrand .brand a em {
+        overflow: hidden;
+        display: none;
+        position: absolute;
+       left: 60px;
+       /* left: 10px;*/
+        width: 0;
+        height: 70px;
+        border: 1px solid #e9e8e8;
+        background: #999;
+        opacity: 0.5;
+        cursor: pointer;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="allbrand">
+        <div class="brand">
+            <a href=""><img alt="兔子" src="http://img.h5course.cn/codepen/2017.01.05.01.jpg" /></a>
+            <a href=""><img alt="鹦鹉" src="http://img.h5course.cn/codepen/2017.01.05.02.jpg" /></a>
+            <a href=""><img alt="萌熊" src="http://img.h5course.cn/codepen/2017.01.05.03.jpg" /></a>
+            <a href=""><img alt="蝴蝶" src="http://img.h5course.cn/codepen/2017.01.05.04.jpg" /></a>
+            <a href=""><img alt="HTML5学堂(码匠)" src="http://img.h5course.cn/codepen/2017.01.05.05.jpg" /></a>
+            <a href=""><img alt="狗狗" src="http://img.h5course.cn/codepen/2017.01.05.06.jpg" /></a>
+            <a href=""><img alt="树蛙" src="http://img.h5course.cn/codepen/2017.01.05.07.jpg" /></a>
+            <a href=""><img alt="蜂鸟" src="http://img.h5course.cn/codepen/2017.01.05.08.jpg" /></a>
+            <a href=""><img alt="灰鸭子" src="http://img.h5course.cn/codepen/2017.01.05.09.jpg" /></a>
+        </div>
+    </div>
+    <script src="https://js.h5course.cn/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+    // 	//翻转
+    // function brandAnimate(label) {
+    //     if(label.find('.brand em').length != 0) {
+    //         return false;
+    //     }
+    //     // 对每个a标签内部动态添加一个em标签，并使其内容为img的alt属性内容
+    //     label.find('.brand a').each(function() {
+    //         $(this).append('<em>' + $(this).find('img').attr('alt') + '</em>');
+    //     });
+
+    //     label.find('.brand a').hover(function() {
+    //         var $this = $(this);
+
+    //         // 鼠标移入img标签动画变小
+    //         $this.children('img').stop(true, true).animate({
+    //             'height': 0,
+    //             'top': '35px'
+    //         }, 200, function() {
+    //             // img隐藏，em显示
+    //             $(this).hide().next().show();
+    //             // em标签动画变大
+    //             $this.children('em').stop(true, true).animate({
+    //                 'height': '70px',
+    //                 'top': 0
+    //             }, 200);
+    //         });
+    //     }, function() {
+    //         var $this = $(this);
+
+    //         // 鼠标移出em标签动画变小
+    //         $this.children('em').stop(true, true).animate({
+    //             'height': 0,
+    //             'top': '35px'
+    //         }, 200, function() {
+    //             // em隐藏，img显示
+    //             $(this).hide().prev().show();
+    //             // img动画变大
+    //             $this.children('img').stop(true, true).animate({
+    //                 'height': '70px',
+    //                 'top': '0'
+    //             }, 200);
+    //         });
+    //     });
+    // }
+    // brandAnimate($('.allbrand'));
+    function brandAnimate(label) {
+        // if (label.find('.brand em').length != 0) {
+        //     return false;
+        // }
+        // 对每个a标签内部动态添加一个em标签，并使其内容为img的alt属性内容
+        label.find('.brand a').each(function() {
+            $(this).append('<em>' + $(this).find('img').attr('alt') + '</em>');
+        });
+
+        label.find('.brand a').hover(function() {
+            var $this = $(this);
+            console.log($this)
+
+            // 鼠标移入img标签动画变小
+            $this.children('img').stop(true, true).animate({
+                'width': 0,
+                'left': '60px'
+            }, 200, function() {
+                // img隐藏，em显示
+                $(this).hide().next().show();
+                console.log($(this));
+                // em标签动画变大
+                $this.children('em').stop(true, true).animate({
+                    'width': '110px',
+                    'left': 0
+                }, 200);
+            });
+        }, function() {
+            var $this = $(this);
+
+
+            // 鼠标移出em标签动画变小
+            $this.children('em').stop(true, true).animate({
+                'width': 0,
+                'left': '60px'
+            }, 200, function() {
+                // em隐藏，img显示
+                $(this).hide().prev().show();
+                // img动画变大
+                $this.children('img').stop(true, true).animate({
+                    'width': '110px',
+                    'left': '0'
+                }, 200);
+            });
+        });
+    }
+    brandAnimate($('.allbrand'));
+    </script>
+</body>
+
+</html>

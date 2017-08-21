@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+    <link rel="stylesheet" type="text/css" href="icontfont/iconfont.css">
+    <style>
+    body,
+    ul,
+    li {
+        padding: 0;
+        margin: 0;
+    }
+    
+    li {
+        list-style-type: none;
+    }
+    
+    .rating {
+        width: 500px;
+        height: 65px;
+        margin: 100px auto;
+    }
+    
+    .rating-item {
+        float: left;
+        width: 65px;
+        height: 65px;
+        background: url(1.png) no-repeat;
+        background-position: -65px 0;
+        cursor: pointer;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 第一种 -->
+    <ul class="rating" id="rating">
+        <li class="rating-item" title="很不好"></li>
+        <li class="rating-item" title="不好"></li>
+        <li class="rating-item" title="一般"></li>
+        <li class="rating-item" title="好"></li>
+        <li class="rating-item" title="很好"></li>
+    </ul>
+    <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript">
+    // //用闭包避免全局变量污染
+    // //用var a=c();重用
+    // var rating = (function() {
+    //     //点亮函数
+    //     var lightOn = function($item,num) {
+    //         $item.each(function(index) {
+    //             if (index < num) {
+    //                 $(this).css("background-position", "0,0")
+    //             } else {
+    //                 $(this).css("background-position", "-65px,0")
+    //             }
+    //         })
+    //     };
+    //     var init = function(el, num) {
+    //         //这里面el代表要点亮的值，Num代表要点亮几颗星星
+    //         var $rating = $(el);
+    //         var $item = $rating.find(".rating-item");
+
+    //         //初始化函数
+    //         lightOn($item,num);
+    //         //移入和点击(事件委托)
+    //         $("#rating").on("mouseover", ".rating-item", function() {
+    //             lightOn($item,$(this).index() + 1);
+    //         }).on("click", ".rating-item", function() {
+    //             num = $(this).index() + 1;
+    //         }).on("mouseout", function() {
+    //             lightOn($item,num);
+    //         });
+    //     };
+    //     return {
+    //         ainit: init
+    //     };
+
+    // })();
+    // rating.ainit("#rating", 2);
+    
+
+
+//尽可能少的暴露局部变量，用自执行函数
+(function(){
+
+
+	
+}())
+
+
+    </script>
+</body>
+
+</html>

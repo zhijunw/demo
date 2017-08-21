@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>放大镜特效</title>
+    <style>
+    * {
+        margin: 0;
+        padding: 0
+    }
+    
+    #demo {
+        display: block;
+        width: 400px;
+        height: 255px;
+        margin: 50px;
+        position: relative;
+        border: 1px solid #ccc;
+    }
+    
+    #small-box {
+        position: relative;
+        z-index: 1;
+    }
+    
+    #big-box {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 460px;
+        width: 400px;
+        height: 300px;
+        overflow: hidden;
+        border: 1px solid #ccc;
+        z-index: 1;
+    }
+    
+    #big-box img {
+        position: absolute;
+        z-index: 5
+    }
+    
+    #float-box {
+        display: none;
+        width: 160px;
+        height: 120px;
+        position: absolute;
+        background: #ffffcc;
+        border: 1px solid #ccc;
+        filter: alpha(opacity=50);
+        opacity: 0.5;
+    }
+    
+    #mark {
+        position: absolute;
+        display: block;
+        width: 400px;
+        height: 255px;
+        background-color: #fff;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        z-index: 10;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="demo">
+        <div id="small-box">
+            <div id="mark"></div>
+            <!-- 放大镜 -->
+            <div id="float-box"></div>
+            <img src="macbook-small.jpg" />
+        </div>
+        <div id="big-box">
+            <img src="macbook-big.jpg" />
+        </div>
+    </div>
+</body>
+
+</html>

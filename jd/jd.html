@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="京东注册页面">
+    <meta name="description" content="京东注册页面">
+    <link rel="stylesheet" type="text/css" href="style/normalize.css">
+    <link rel="stylesheet" type="text/css" href="style/jd.css">
+    <title>京东注册页面</title>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header>
+        <div class="header-warrper warrper">
+            <!-- z左边 -->
+            <div class="header-left">
+                <i class="left-logo"></i>
+                <a href="">收藏京东</a>
+            </div>
+            <!-- 右边 -->
+            <div class="header-nav">
+                <ul class="nav-menu">
+                    <li>
+                        <a href="">你好，请登录</a>&nbsp;&nbsp;
+                        <a href="">免费注册</a></li>
+                    <li>
+                        <b></b>
+                        <a href="">我的订单</a>
+                    </li>
+                    <li>
+                        <b></b>
+                        <a href="">手机京东</a></li>
+                    <li class="nth5">
+                        <b></b>
+                        <a href="">客户服务</a>
+                        <i></i>
+                    </li>
+                    <li class="nth6">
+                        <b></b>
+                        <a href="">网站导航</a>
+                        <i></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- 内容 -->
+    <article class="content">
+        <div class="warrper">
+            <!-- logo -->
+            <section class="content-logo">
+                <a href="">
+                    <img src="images/1.png">
+                </a>
+                <b></b>
+            </section>
+            <!-- 注册信息 -->
+            <section class="regist">
+                <section class="regist-title">
+                    <ul>
+                        <li><a href="">个人用户</a></li>
+                        <li class="active"><a href="">企业用户</a></li>
+                        <li><a href="">international Customers</a></li>
+                    </ul>
+                    <div class="login">
+                        <span>我已经注册，现在就</span>
+                        <a href="">登录</a>&nbsp;&nbsp;
+                        <a href="">English</a>
+                    </div>
+                </section>
+                <section class="regist-content">
+                    <section class="regist-logo">
+                        <img src="images/3.jpg" alt="">
+                        <div class="reg-explain">
+                            <span>服务须知：我们的审核时限为24小时(工作日)，遇法定节假日顺延。如有疑问，请拨打企业专享热线：&nbsp;400--26-000或<a href="">留言咨询</a></span>
+                            <a href="" class="more">了解更多</a>
+                        </div>
+                    </section>
+                    <form method="POST" class="form">
+                        <h3>账户信息</h3>
+                        <div class="account-info">
+                            <label for="name" class="label">
+                                <b class="requird">*</b>用户名:
+                            </label>
+                            <input type="text" id="name" class="name">
+                        </div>
+                        <div class="account-info">
+                            <label for="password" class="label">
+                                <b class="requird">*</b>请设置密码:
+                            </label>
+                            <input type="password" id="password" class="name">
+                            <div class="passwordlength">
+                                <span>安全程度</span>
+                                <i class="pass-logo"></i>
+                            </div>
+                        </div>
+                        <div class="account-info">
+                            <label for="sure" class="label">
+                                <b class="requird">*</b>请确认密码:
+                            </label>
+                            <input type="password" id="sure" class="name">
+                        </div>
+                        <h3>公司信息</h3>
+                        <div class="campany account-info">
+                            <label for="company" class="label">
+                                <b class="requird">*</b>公司名称:
+                            </label>
+                            <input type="text" id="company" class="name">
+                        </div>
+                        <div class="campany account-info">
+                            <label for="area" class="label">
+                                <b class="requird">*</b>公司所在地:
+                            </label>
+                            <select id="prov" onchange="changeCity()">
+                                <option>选择省份</option>
+                            </select>
+                            <select id="city" onchange="changequ()">
+                                <option>选择城市</option>
+                            </select>
+                            <select id="area">
+                                <option>
+                                    选择地区
+                                </option>
+                            </select>
+                        </div>
+                        <div class="campany account-info">
+                            <label for="address" class="label">
+                                <b class="requird">*</b>公司地址:
+                            </label>
+                            <input type="text" id="address" class="name">
+                        </div>
+                        <div class="campany account-info" style="height: auto;">
+                            <label class="label">
+                                <b class="requird">*</b>购买类型:
+                            </label>
+                            <div class="ITbox">
+                                <input type="checkbox" value="" class="checkbox" id="checkedOne">
+                                <label for="checkedOne" class="IT">IT设备</label>
+                                <input type="checkbox" value="" class="checkbox" id="checkedTwo">
+                                <label for="checkedTwo" class="IT">数码通讯</label>
+                                <input type="checkbox" value="" class="checkbox" id="checkedThere">
+                                <label for="checkedThere" class="IT">办公用品耗材</label>
+                                <input type="checkbox" value="" class="checkbox" id="checkedFour">
+                                <label for="checkedFour" class="IT">大家电</label>
+                                <input type="checkbox" value="" class="checkbox" id="checkedFive">
+                                <label for="checkedFive" class="IT">项目合作-政府采购</label>
+                                <input type="checkbox" value="" class="checkbox" id="checkedSix">
+                                <label for="checkedSix" class="IT">礼品</label>
+                                <br/>
+                                <input type="checkbox" value="" class="checkbox" id="checkedN">
+                                <label for="checkedN" class="IT">商旅</label>
+                                <input type="checkbox" value="k" class="checkbox" id="checkedTen">
+                                <label for="checkedTen" class="IT">礼品卡</label>
+                            </div>
+                            <div class="allcheckbox">
+                                <input type="button" id="checkedAll" value="全选">
+                                <input type="button" id="checkedNo" value="全不选">
+                                <input type="button" id="checkedRev" value="反选">
+                            </div>
+                        </div>
+                        <div class="campany account-info">
+                            <label for="num" class="label">
+                                <b class="requird">*</b>注册邀请码:
+                            </label>
+                            <input type="text" id="num" class="name">
+                        </div>
+                        <div class="campany account-info">
+                            <label for="" class="label">
+                                企业人数
+                            </label>
+                            <select id="selected">
+                                <option value="请选择"></option>
+                                <option>1-100</option>
+                                <option>100-500</option>
+                                <option>500-1000</option>
+                            </select>
+                        </div>
+                        <div class="campany account-info">
+                            <label for="" class="label">
+                                公司行业:
+                            </label>
+                            <select id="selected">
+                                <option value="请选择"></option>
+                                <option>互联网</option>
+                                <option>汽车售后</option>
+                                <option>旅游</option>
+                            </select>
+                        </div>
+                        <div class="campany account-info">
+                            <label for="" class="label">
+                                公司性质:
+                            </label>
+                            <select id="selected">
+                                <option value="请选择"></option>
+                                <option>个人</option>
+                                <option>国企</option>
+                                <option>中外合资</option>
+                            </select>
+                        </div>
+                        <h3>联系人信息</h3>
+                        <div class="account-info">
+                            <label for="name" class="label">
+                                <b class="requird">*</b>联系人姓名:
+                            </label>
+                            <input type="text" id="realname" class="name">
+                        </div>
+                        <div class="campany account-info">
+                            <label for="" class="label">
+                                所在部门:
+                            </label>
+                            <select id="selected">
+                                <option value="请选择"></option>
+                                <option>WEB</option>
+                                <option>PHP</option>
+                                <option>UI</option>
+                            </select>
+                        </div>
+                        <div class="account-info">
+                            <label for="fixedTel" class="label">
+                                <b class="requird">*</b>固定电话:
+                            </label>
+                            <input type="text" id="fixedTel" class="name">
+                        </div>
+                        <div class="account-info">
+                            <label for="tel" class="label">
+                                <b class="requird">*</b>验证手机:
+                            </label>
+                            <input type="text" id="tel" class="name">
+                        </div>
+                        <div class="account-info">
+                            <label for="emall" class="label">
+                                <b class="requird">*</b>验证邮箱:
+                            </label>
+                            <input type="text" id="emall" class="name">
+                        </div>
+                        <div class="account-info sureinfo">
+                            <input type="checkbox" class="surecheck">
+                            <label>我已阅读并同意《京东用户注册协议》</label>
+                        </div>
+                        <div class="account-info sureinfo">
+                            <input type="submit" value="立即注册" id="send" class="btn" />
+                        </div>
+                    </form>
+                </section>
+            </section>
+        </div>
+    </article>
+    <footer>
+        <div class="warrper">
+            <div class="menu-list">
+                <ul>
+                    <li><a href="">关于我们</a><b></b></li>
+                    <li><a href="">联系我们</a><b></b></li>
+                    <li><a href="">人才招聘</a><b></b></li>
+                    <li><a href="">商家入驻</a><b></b></li>
+                    <li><a href="">广告服务</a><b></b></li>
+                    <li><a href="">手机京东</a><b></b></li>
+                    <li><a href="">友情链接</a><b></b></li>
+                    <li><a href="">销售联盟</a><b></b></li>
+                    <li><a href="">京东社区</a><b></b></li>
+                    <li><a href="">京东公益</a><b></b></li>
+                    <li><a href="">English Site</a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <span>Copyright©2004-2016  京东JD.com 版权所有</span>
+            </div>
+        </div>
+    </footer>
+    <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jd.js"></script>
+    <script type="text/javascript">
+    var cityList = new Array();
+    var quList = new Array();
+    cityList['北京'] = ['北京'];
+    cityList['浙江'] = ['杭州市', '温州市', '金华市', '临安市'];
+    cityList['陕西'] = ['西安', '宝鸡', '咸阳'];
+    cityList['甘肃'] = ['兰州市', '武威市', '酒泉市', '张掖市'];
+     console.log(cityList);
+    quList['北京'] = ['1区', '2区', '3区', '4区'];
+    quList['杭州市'] = ['5区', '6区', '7区', '8区'];
+    quList['温州市'] = ['9区', '10区', '11区', '12区'];
+    quList['西安'] = ['13区', '14区', '15区', '16区'];
+    quList['宝鸡'] = ['17区', '18区', '19区', '20区'];
+    quList['兰州市'] = ['21区', '22区', '23区', '24区'];
+    // console.log(quList);
+    window.onload = allData;
+
+    function allData() {
+        var shengfen = document.getElementById('prov');
+        for (var sf in cityList) {
+            console.log(sf)
+            shengfen.add(new Option(sf, sf));
+        }
+    }
+    function changeCity() {
+        var chengshi = document.getElementById('city');
+        var sheng = document.getElementById('prov').value;
+        chengshi.options.length = 1;
+        for (var cs in cityList[sheng]) {
+            console.log(cs);
+            console.log(cityList[sheng]);
+            chengshi.add(new Option(cityList[sheng][cs], cityList[sheng][cs]));
+        }
+    }
+    function changequ() {
+        var shiqu = document.getElementById('area');
+        var cheng = document.getElementById('city').value;
+        shiqu.options.length = 1;
+        for (var sh in quList[cheng]) {
+
+            shiqu.add(new Option(quList[cheng][sh], quList[cheng][sh]));
+        }
+    }
+    </script>
+</body>
+
+</html>
